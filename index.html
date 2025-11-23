@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Engineer Code-Assistant Maturity Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Code-Assistant Maturity Tracker</h1>
+    <p>Track maturity levels, usage metrics, and next steps for engineers using code assistants.</p>
+  </header>
+
+  <main>
+    <section id="dashboard">
+      <h2>Summary Dashboard</h2>
+      <div class="cards">
+        <div class="card" id="card-level-1">Level 1: <span class="val">0%</span></div>
+        <div class="card" id="card-level-2">Level 2: <span class="val">0%</span></div>
+        <div class="card" id="card-level-3">Level 3: <span class="val">0%</span></div>
+        <div class="card" id="card-level-4">Level 4: <span class="val">0%</span></div>
+        <div class="card" id="card-pending">Pending Actions: <span class="val">0</span></div>
+      </div>
+
+      <div class="charts">
+        <div class="chart">
+          <h3>Trend Over Time</h3>
+          <canvas id="trendCanvas" width="600" height="200"></canvas>
+        </div>
+        <div class="chart">
+          <h3>Pending Action Items</h3>
+          <ul id="pendingList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="sheet">
+      <h2>Engineers</h2>
+      <table id="engineersTable">
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Engineer Name</th>
+            <th>Current Level</th>
+            <th>Definition of Level</th>
+            <th>Usage Metrics</th>
+            <th>Training Completed</th>
+            <th>Next Action Plan</th>
+            <th>Target Level</th>
+            <th>Timeline</th>
+            <th>Progress</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div class="notes">
+        <h4>Formulas / Notes</h4>
+        <ul>
+          <li><b>Percentage of engineers at level X</b>: (count_at_level / total_engineers) * 100</li>
+          <li><b>Progress</b>: min(current_level / target_level, 1) * 100</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Template — edit <code>data.json</code> to update sample data.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
